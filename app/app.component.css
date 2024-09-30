@@ -1,0 +1,127 @@
+.navbar {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px; /* Reduced padding to reduce navbar height */
+  background-color: #00796b;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo > img {
+  width: 25px; /* Reduced the size of the logo */
+  height: 20px; /* Reduced height */
+}
+
+.brand-title {
+  margin-left: 3px; /* Reduced margin to minimize height */
+  font-size: 1.2em; /* Slightly reduced font size */
+}
+
+.navbar-links, .navbar-auth {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #ffe082;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.navbar a:hover::after, .navbar a.active::after {
+  width: 100%;
+  /* background: #ffe082; */
+}
+
+.signup-button {
+  /* color: white !important; */
+  /* background-color: #ffffff; */
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #005a4f;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.footer{
+  padding: 20px;
+  background-color: #57706d;
+  text-align: center;
+}
+.footer>.copyrights{
+  font-weight: 300;
+  color: white;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-links, .navbar-auth {
+      display: none;
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar.expanded .navbar-links,
+  .navbar.expanded .navbar-auth {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #0288d1;
+  }
+
+  .navbar-links a, .navbar-auth a {
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      border-bottom: 1px solid white;
+  }
+}

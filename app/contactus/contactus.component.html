@@ -1,0 +1,57 @@
+<div class="contact-container">
+  <div class="contact-card">
+    <!-- Icons Section -->
+    <div class="contact-icons">
+      <div class="contact-icon">
+
+        <img src="download.jpeg" alt="John Doe">
+        <p>+1234567890</p>
+        <p>WhatsApp Us</p>
+      </div>
+      <div class="contact-icon">
+
+        <img src="download.jpeg" alt="John Doe">
+        <p>+1234567890</p>
+        <p>Call Us</p>
+      </div>
+      <div class="contact-icon">
+
+        <img src="download.jpeg" alt="John Doe">
+        <p>contact&#64;example.com</p>
+        <p>Email Us</p>
+      </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" class="form-control" [(ngModel)]="contact.name" name="name" required #name="ngModel">
+          <div *ngIf="name.invalid && name.touched" class="error-msg">Name is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" class="form-control" [(ngModel)]="contact.email" name="email" required email #email="ngModel">
+          <div *ngIf="email.invalid && email.touched" class="error-msg">Valid email is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Your Phone Number:</label>
+          <input type="tel" id="phone" class="form-control" [(ngModel)]="contact.phone" name="phone" required pattern="[0-9]{10}" #phone="ngModel">
+          <div *ngIf="phone.invalid && phone.touched" class="error-msg">Valid 10-digit phone number is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" class="form-control" [(ngModel)]="contact.message" name="message" required #message="ngModel"></textarea>
+          <div *ngIf="message.invalid && message.touched" class="error-msg">Message is required.</div>
+        </div>
+
+        <button type="submit" class="btn-send" [disabled]="contactForm.invalid">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>

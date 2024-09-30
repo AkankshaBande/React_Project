@@ -1,0 +1,145 @@
+.contact-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.contact-card {
+  display: flex;
+  background-color: #ffffff; /* White background for card */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #004d99; /* Border color to match theme */
+}
+
+.contact-icons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  border-right: 1px solid #ddd;
+  background-color: #c3f0f3; /* Light background color for icons section */
+}
+
+.contact-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #004d99;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon i {
+  font-size: 40px;
+  color: #ffffff; /* Icon color */
+  background-color: #004d99; /* Background color for icons */
+  border-radius: 50%; /* Circular shape */
+  padding: 15px; /* Add some padding to make the circle */
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contact-icon p {
+  margin: 0;
+  color: #000000; /* Text color */
+}
+
+.contact-form {
+  flex: 2;
+  padding-left: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #29dfec; /* Heading color */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Label color */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  margin-right: 20px; /* Added margin-right */
+}
+
+input:focus, textarea:focus {
+  border-color: #004d99; /* Focus color for input fields */
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn-send {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #29dfec; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-send:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.btn-send:hover:not(:disabled) {
+  background-color: #9fd9e3; /* Darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-icons {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .contact-form {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  input, textarea {
+    margin-right: 0; /* Remove margin-right for smaller screens */
+  }
+}

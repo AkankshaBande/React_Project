@@ -1,0 +1,57 @@
+<div class="schedule-container">
+  <h1>Check Schedules</h1>
+
+  <div class="content">
+    <!-- Filters Section -->
+    <div class="filters">
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="filters.date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" [(ngModel)]="filters.time" required>
+
+      <label for="fromCity">From City:</label>
+      <input type="text" id="fromCity" [(ngModel)]="filters.fromCity" placeholder="Enter departure city" pattern="[A-Za-z\s]+" title="Enter a valid city name" required>
+
+      <label for="toCity">To City:</label>
+      <input type="text" id="toCity" [(ngModel)]="filters.toCity" placeholder="Enter destination city" pattern="[A-Za-z\s]+" title="Enter a valid city name" required>
+
+      <button (click)="applyFilters()" class="btn" [disabled]="!filters.date || !filters.time || !filters.fromCity || !filters.toCity">Apply Filters</button>
+    </div>
+
+    <!-- Schedules Section -->
+    <div class="schedules">
+      <!-- First Card -->
+      <div *ngFor="let schedule of filteredSchedules" class="schedule-item">
+        <h3>{{ schedule.type }} - {{ schedule.name }}</h3>
+        <p><strong>From:</strong> {{ schedule.fromCity }} | <strong>To:</strong> {{ schedule.toCity }}</p>
+        <p><strong>Departure:</strong> {{ schedule.time }} | <strong>Date:</strong> {{ schedule.date }}</p>
+        <button (click)="bookTicket(schedule)" class="btn">Book Ticket</button>
+      </div>
+
+      <!-- Second Card -->
+      <div class="schedule-item">
+        <h3>Bus - Express Line</h3>
+        <p><strong>From:</strong> City A | <strong>To:</strong> City B</p>
+        <p><strong>Departure:</strong> 10:00 AM | <strong>Date:</strong> 2024-09-10</p>
+        <button (click)="bookTicket({ type: 'Bus', name: 'Express Line', fromCity: 'City A', toCity: 'City B', time: '10:00 AM', date: '2024-09-10' })" class="btn">Book Ticket</button>
+      </div>
+
+      <!-- Third Card -->
+      <div class="schedule-item">
+        <h3>Train - Intercity Express</h3>
+        <p><strong>From:</strong> City C | <strong>To:</strong> City D</p>
+        <p><strong>Departure:</strong> 2:30 PM | <strong>Date:</strong> 2024-09-12</p>
+        <button (click)="bookTicket({ type: 'Train', name: 'Intercity Express', fromCity: 'City C', toCity: 'City D', time: '2:30 PM', date: '2024-09-12' })" class="btn">Book Ticket</button>
+      </div>
+
+      <!-- Fourth Card -->
+      <div class="schedule-item">
+        <h3>Flight - SkyJet 450</h3>
+        <p><strong>From:</strong> City E | <strong>To:</strong> City F</p>
+        <p><strong>Departure:</strong> 5:00 PM | <strong>Date:</strong> 2024-09-15</p>
+        <button (click)="bookTicket({ type: 'Flight', name: 'SkyJet 450', fromCity: 'City E', toCity: 'City F', time: '5:00 PM', date: '2024-09-15' })" class="btn">Book Ticket</button>
+      </div>
+    </div>
+  </div>
+</div>

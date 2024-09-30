@@ -1,0 +1,73 @@
+
+<body>
+  <div class="container">
+    <h1>Book a Ticket For Bus</h1>
+    <form (ngSubmit)="bookTicket()" #ticketForm="ngForm">
+      <div>
+        <label for="dateTime">Date & Time:</label>
+        <input type="date" id="date" name="date" [(ngModel)]="ticket.date" required>
+        <input type="time" id="time" name="time" [(ngModel)]="ticket.time" required>
+      </div>
+  
+      <div>
+        <label for="travelFrom">Travel From:</label>
+        <select id="travelFrom" name="travelFrom" [(ngModel)]="ticket.travelFrom" required>
+          <option value="" disabled selected>Select a city</option>
+          <option value="Pune">Pune</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Banglore">Banglore</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="travelTo">Travel To:</label>
+        <select id="travelTo" name="travelTo" [(ngModel)]="ticket.travelTo" required>
+          <option value="" disabled selected>Select a city</option>
+          <option value="Pune">Pune</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Banglore">Banglore</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="seat">Preferred Seat:</label>
+        <select id="seat" name="seat" [(ngModel)]="ticket.seat" required>
+          <option value="Window">Window</option>
+          <option value="Side">Side</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="ticket.name" required>
+      </div>
+  
+      <div>
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" [(ngModel)]="ticket.age" required>
+      </div>
+  
+      <div>
+        <label for="mobile">Your Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" [(ngModel)]="ticket.mobile" required>
+      </div>
+  
+      <div>
+        <label>Payment Method:</label>
+        <input type="radio" id="netBanking" name="payment" value="Net Banking" [(ngModel)]="ticket.paymentMethod"> Net Banking
+        <input type="radio" id="qrCode" name="payment" value="Through QR code" [(ngModel)]="ticket.paymentMethod"> Through QR code
+        <input type="radio" id="upi" name="payment" value="UPI Payment" [(ngModel)]="ticket.paymentMethod"> UPI Payment
+      </div>
+  
+      <button type="submit">Book Ticket</button>
+    </form>
+  </div>
+  </body>
+  
+

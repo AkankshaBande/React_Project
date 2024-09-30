@@ -1,0 +1,14 @@
+<div class="my-bookings-container">
+  <h2>My Bookings</h2>
+  <div class="booking-list">
+    <div class="booking-card" *ngFor="let booking of bookings">
+      <h3>{{ booking.type }} Ticket</h3>
+      <p><strong>Route:</strong> {{ booking.route }}</p>
+      <p><strong>Departure:</strong> {{ booking.departure }}</p>
+      <p><strong>Status:</strong> {{ booking.status }}</p>
+      <button (click)="cancelTicket(booking.id)" [disabled]="booking.status === 'Cancelled'">
+        Cancel Ticket
+      </button>
+    </div>
+  </div>
+</div>

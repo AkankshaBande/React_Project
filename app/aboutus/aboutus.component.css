@@ -1,0 +1,138 @@
+.about-us-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff, #f0f4f8);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: #00274d;
+  font-family: 'Arial', sans-serif;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 2.4em;
+  color: #003366;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #003366;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+h2 i {
+  font-size: 1.6em;
+  color: #003366;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #4a4a4a;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  color: #004d99;
+  font-weight: bold;
+}
+
+.director-details {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #e8f4f8;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.director-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #003366;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.director-info h3 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #00274d;
+}
+
+.director-info p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.our-history, .our-values, .our-mission, .our-vision, .our-team {
+  background: #f6fbff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.our-values ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #003366;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+.team-member {
+  text-align: center;
+  flex: 1 1 calc(33% - 30px);
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+  font-size: 1.6em;
+  color: #00274d;
+  margin: 15px 0;
+}
+
+.team-member p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .director-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}

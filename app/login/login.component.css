@@ -1,0 +1,131 @@
+/* Container for the entire login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #d3f9ed52 0%, #bbfffc59 100%); */
+  padding: 20px;
+}
+
+/* The login form box */
+.login-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.538);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Logo container */
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Form title */
+h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1em;
+  color: #60e0e6;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e53935;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: #6ae0f8;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00796b;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Extra options (Forgot Password, Sign Up) */
+.extra-options {
+  margin-top: 15px;
+}
+
+.extra-options a {
+  color: #48dae2;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin: 0 5px;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 500px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+    font-size: 0.9em;
+    color: #48dae2;
+  }
+}

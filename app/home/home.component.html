@@ -1,0 +1,93 @@
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Travel Management</h1>
+    <h2>Your gateway to efficient and seamless travel planning</h2>
+    <button routerLink="/book-ticket" class="cta-button">Book Your Ticket</button>
+  </div>
+</div>
+
+<!-- Rotator Section -->
+<div class="rotator">
+  <div class="rotator-item">
+    <h2>🎉 50% Diwali Sale</h2>
+    <p>Enjoy 50% off on all bookings during the Diwali season!</p>
+  </div>
+  <div class="rotator-item">
+    <h2>📄 Ticket Cancellation Policy</h2>
+    <p>Flexible cancellation options for all types of bookings.</p>
+  </div>
+  <div class="rotator-item">
+    <h2>🍽️ Food Service Policy</h2>
+    <p>Free meals on select routes.</p>
+  </div>
+</div>
+
+<!-- Travel Options Section -->
+<div class="travel-options">
+  <div class="travel-option">
+    <h2>🚂 Travel by Train</h2>
+    <p>Comfortable and scenic train journeys across the country.</p>
+    <button routerLink="/train-registration" [queryParams]="{mode: 'train'}">Book Train Ticket</button>
+  </div>
+  <div class="travel-option">
+    <h2>🚌 Travel by Bus</h2>
+    <p>Convenient and affordable bus services to various destinations.</p>
+    <button routerLink="/bus-booking" [queryParams]="{mode: 'bus'}">Book Bus Ticket</button>
+  </div>
+  <div class="travel-option">
+    <h2>✈️ Travel by Plane</h2>
+    <p>Fast and efficient air travel to all major cities.</p>
+    <button routerLink="/plain-booking" [queryParams]="{mode: 'plane'}">Book Plane Ticket</button>
+  </div>
+</div>
+
+<!-- Top Schedules Section -->
+<div class="top-schedules">
+  <h2>Top 10 Trains, Buses, and Planes</h2>
+  <div class="schedule-list">
+    <div class="schedule-item">
+      <h3>🚂 Train from City A to City B</h3>
+      <p>Departure Time: 10:00 AM</p>
+      <button routerLink="/book-ticket" [queryParams]="{mode: 'train'}">Book Ticket</button>
+    </div>
+    <div class="schedule-item">
+      <h3>🚌 Bus from City C to City D</h3>
+      <p>Departure Time: 11:00 AM</p>
+      <button routerLink="/book-ticket" [queryParams]="{mode: 'bus'}">Book Ticket</button>
+    </div>
+    <div class="schedule-item">
+      <h3>✈️ Plane from City E to City F</h3>
+      <p>Departure Time: 12:00 PM</p>
+      <button routerLink="/book-ticket" [queryParams]="{mode: 'plane'}">Book Ticket</button>
+    </div>
+    <!-- Add more schedule items as needed -->
+  </div>
+</div>
+
+<!-- Happy Clients Section -->
+<div class="happy-clients">
+  <h2>Our Happy Clients</h2>
+  <div class="client-feedback">
+    <div class="feedback-card">
+      <p>"Excellent service and easy to use!"</p>
+      <span>- Alice Johnson</span>
+    </div>
+    <div class="feedback-card">
+      <p>"Highly recommend for hassle-free travel."</p>
+      <span>- Bob Smith</span>
+    </div>
+    <div class="feedback-card">
+      <p>"Great experience with timely updates."</p>
+      <span>- Carol Davis</span>
+    </div>
+    <div class="feedback-card">
+      <p>"The booking process was smooth and efficient."</p>
+      <span>- David Brown</span>
+    </div>
+    <div class="feedback-card">
+      <p>"Customer support was very helpful."</p>
+      <span>- Emma Wilson</span>
+    </div>
+  </div>
+</div>
